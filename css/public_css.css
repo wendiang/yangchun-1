@@ -1,0 +1,70 @@
+﻿/*公共头*/
+blockquote, body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, input, legend, li, ol, pre, td, textarea, th, ul{margin:0;padding: 0}
+html{ overflow-x:hidden;}
+body{
+    font-size: 16px;
+    font-family: "Microsoft YaHei", serif;
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+*:focus{
+    outline: none;
+}
+h1,h2,h3,h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+a{
+    color: #666;
+}
+ul,ol{
+    list-style: none;
+}
+em,i{
+    font-style: normal;
+}
+a,a:link, a:visited, a:hover, a:active {
+    text-decoration:none;
+}   /* 去链接下划线 */
+.content{ min-height:510px;  }
+.nocopy{  /* css禁止用户选择文本 */
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/**文字颜色**/
+.title_blue{ color: #00a0e9;}
+
+/*header*/
+.yc-navbar-head{border:0px;margin:0px;padding:8px 0;background:#fff;}
+.yc-navbar-toggle{ margin-right: 0; }
+.yc-navbar-brand>img{    margin-top: -15px;height: 50px;}
+.yc-header .yc-navbar-menu{ margin-bottom: 0; }
+.yc-navbar-menu .navbar-nav>.active>a,
+.yc-navbar-menu .navbar-nav>.active>a:focus,
+.yc-navbar-menu .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+/*footer*/
+.pub_footer{ color: #fff;position: relative;}
+.footer_bg{background: #565656;}
+.footer_main{ padding: 30px 0 }
+.footer_main li a{ color: #fff;}
+.footer_t{ background: #2a2a2a;padding:10px 0 }
+
+/*back to top*/
+.totop{position:fixed;right:25px;bottom:25px;display:block;width:26px;height:62px;background:url(../images/rocket.png) no-repeat 0 0;-webkit-transition: all 0.2s ease-in-out;}
+.totop:hover{background:url(../images/rocket.png) no-repeat 0 -62px;}
+
+
+/* width< 768px phone */
+@media only screen and (max-width:767px) {
+    .yc-navbar-menu{ min-height: 0; }
+    .footer_main{ padding: 10px 0 }
+}
+

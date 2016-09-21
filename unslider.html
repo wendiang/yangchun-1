@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Unslider</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!--<script src="js/respond.js"></script>
+    <script src="js/html5.js"></script>-->
+
+    <!--jquery-->
+    <script type="text/javascript" src="js/Jq1.9.js"></script>
+    <!-- bootstrap -->
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+    <!-- unslider -->
+    <script type="text/javascript" src="js/unslider.js"></script>
+    <style>
+        .banner { position: relative; overflow: auto; }
+        .banner li { list-style: none; }
+        .banner ul { padding:0; }
+        .banner ul li { float: left; }
+        .banner ul li img { width: 100%; }
+        .banner .dots {
+            position: absolute;
+            right: 30px;
+            bottom: 20px;
+        }
+        .banner .dots li {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 4px;
+
+            border: 2px solid #fff;
+            border-radius: 50%;
+            text-indent: -999em;
+            cursor: pointer;
+            opacity: .4;
+
+        }
+        .banner .dots li.active {
+            background: #00a0e9;
+            opacity: 1;
+        }
+    </style>
+
+
+</head>
+<body>
+<h1>Hello World</h1>
+<div class="banner">
+    <ul>
+        <li><img class="img-responsive center-block" src="images/banner-1.jpg"></li>
+        <li><img class="img-responsive center-block" src="images/banner-2.jpg"></li>
+        <li><img class="img-responsive center-block" src="images/banner-3.jpg"></li>
+        <li><img class="img-responsive center-block" src="images/banner-4.jpg"></li>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    if(window.chrome) {
+        $('.banner li').css('background-size', '100% 100%');
+    }
+    $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
+        unslider.data('unslider')[fn]();
+    });
+
+    $('.banner').unslider({
+        arrows: false,             //  显示左右切换箭头
+        fluid: true,               //  支持响应设计
+        dots: true,                //  显示点导航
+        speed: 500,                //  切换速度(毫秒)
+        delay: 3000,               //  切换间隔(毫秒)
+        complete: function() {
+            console.log("play");
+        },  //  A function that gets called after every slide animation
+        keys: true                //  启用键盘快捷键(左、右)箭头
+    });
+</script>
