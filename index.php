@@ -1,5 +1,5 @@
-<?php
-title='阳春佬首页';
+?php
+title='首页';
 include('header.php');
 ?>
 <!--
